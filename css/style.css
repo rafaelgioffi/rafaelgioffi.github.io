@@ -64,7 +64,7 @@ header {
 
 .menu .menu-link {
     display: block;
-    margin: 10px;
+    margin: 30px;
     padding: 10px;
     color: #E9F3FE;
     font-weight: bold;
@@ -83,7 +83,7 @@ main {width: 100%;}
 
 .super-card {
     width: 100%;
-    height: 70vh;
+    height: 50vh;
     display: flex;
     margin-top: 20px;
     align-items: center;
@@ -129,7 +129,7 @@ main {width: 100%;}
     width: 190px;
     display: table;
     margin: 0 auto; 
-    border-radius: 50%;
+    border-radius: 40%;
 }
 
 .card-body { padding: 1em; }
