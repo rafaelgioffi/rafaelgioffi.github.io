@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;600&display=swap');
+
+* {
+    font-family: 'Open Sans', sans-serif;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #f7f7f7;
+}
+
+body h1{
+    color: coral;
+}
+
+body h3 {
+    color: coral;
+}
+
+.calc {
+    display: flex;
+    width: auto;
+    height: 30px;
+    align-items: center;
+    align-content: space-between;
+    justify-content: center;    
+}
+
+.calc h3 {
+    flex-wrap: nowrap;
+    padding-right: 10px;
+    padding-left: 5px;
+    color: chocolate;
+}
+
+.calc input {
+    padding-right: 10px;
+    margin-right: 10px;
+    width: 180px;
+    font-size: 14pt;
+    font-weight: bold;
+    color: coral;
+}
+
+.btn {
+    display: flex;
+    padding: 15px;
+    font-weight: bold;
+}
+
+.btn button {
+    align-items: center;
+    /* background-color: #f7f7f7; */
+    margin: 10px;
+    font-weight: 600;
+}
+
+.btnMais {
+    color: lightcyan;
+    background-color: cornflowerblue;
+    border-color: cornflowerblue;
+}
+
+.btnMenos {
+    color: lightcyan;
+    border-color: lightcoral;
+    background-color: lightcoral;
+}
+
+#result {
+    display: flex;
+    align-items: center;
+    font-size: 18pt;
+    font-weight: bolder;
+    color: chocolate;
+}
+
+@media (max-width: 650px) {
+    body {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;        
+        width: 100%;
+    }
+
+    body h1 {
+        font-size: 16pt;
+    }
+
+    .calc {
+        flex-direction: column;
+        margin: 15px;
+        align-content: center;
+        flex: 1;
+    }
+}

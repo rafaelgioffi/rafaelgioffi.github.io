@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Números notáveis</title>
+    <link rel="stylesheet" href="css/notaveis.css">
+</head>
+<body>
+    <h1>Calculadora de Números Notáveis</h1>
+    <h3>f(x) = A² +- 2AB + B²</h3>
+    <div class="calc">
+        <h3>Valor de "A"</h3>
+        <input id="valA" type="number" placeholder='Insira o valor de "A"' />
+        <h3>Valor de "B"</h3>
+        <input id="valB" type="number" placeholder='Insira o valor de "B"' />
+     </div>
+     <div class="btn">
+        <button type="button" onclick="soma()" class="btnMais">C/ Soma</button>
+        <button type="button" onclick="menos()" class="btnMenos">C/ Subtração</button>
+    </div>
+    <div id="result"></div>
+
+    <script src="js/notaveis.js"></script>
+</body>
+</html>
