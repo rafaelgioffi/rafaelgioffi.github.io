@@ -562,6 +562,11 @@ ul.numbersList span{
 
 .contact-info p {
     padding: 27px 10px;
+	white-space: nowrap;
+}
+
+.contact-info a {
+	color: #FFF;
 }
 
 .contact-info span {
