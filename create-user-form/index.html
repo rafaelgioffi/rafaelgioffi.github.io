@@ -1,0 +1,317 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link href="assets/css/style.css" rel="stylesheet">
+    <title>Form</title>
+  </head>
+  <body>
+    <div class="container title">
+      <h3>Cadastre-se agora</h3>
+      <p>Registre-se para realizar pedidos</p>
+    </div>
+    
+    <form id="form" class="needs-validation" method="post" novalidate>
+    <div class="container">
+
+      <div class="container form__princ">        
+        <div class="row">
+          <div class="col-6">
+            <label for="cpfcnpj" class="form-label">CPF/CNPJ<span class="text-danger">*</span></label>
+            <input id="cpfcnpj" type="text" class="form-control" required>
+            <div id="cpfcnpj_msg" class="invalid-feedback">Por favor, preencha o CPF/CNPJ</div>
+          </div>
+          <div class="col-6">
+            <label for="dataNasc" class="form-label">Data de Nascimento<span class="text-danger">*</span></label>
+            <input id="dataNasc" type="date" required class="form-control">
+            <div class="invalid-feedback">Por favor, preencha a data de nascimento</div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="container form__princ">
+        <div class="col-12">
+          <label for="nome" class="form-label">Nome Completo<span class="text-danger">*</span></label>
+          <input id="nome" required type="text" class="form-control" minlength="5" />
+          <div class="invalid-feedback">Por favor, preencha seu nome</div>
+        </div>
+      </div>
+      
+      <div class="container form__princ">
+        <div class="col-12">
+          <label for="email">E-mail<span class="text-danger">*</span></label>
+          <input id="email" type="email" required class="form-control">
+          <div class="invalid-feedback">Por favor, preencha seu e-mail</div>
+        </div>
+      </div>
+      
+      <div class="container form__princ">
+        <div class="row">        
+          <div class="col-6">
+            <label for="tel" class="form-label">Telefone Fixo</label>
+            <input id="tel" type="tel" class="form-control" maxlength="14" data-mask="(99) 9999-9999">
+          </div>
+          <div class="col-6">
+            <label for="cel" class="form-label">Telefone Celular<span class="text-danger">*</span></label>
+            <input id="cel" type="tel" required class="form-control" minlength="15" maxlength="15" data-mask="(99) 99999-9999">
+            <div class="invalid-feedback">Por favor, preencha seu telefone celular</div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="container form__princ">
+        <div class="row">        
+          <div class="col-6">
+            <label for="senha" class="form-label">Senha<span class="text-danger">*</span></label>
+            <input id="senha" type="password" required class="form-control">
+            <div id="passcheck" class="invalid-feedback">Por favor, preencha uma senha</div>
+          </div>
+          <div class="col-6">
+            <label for="conf_senha" class="form-label">Confirmação da Senha<span class="text-danger">*</span></label>
+            <input id="conf_senha" type="password" required class="form-control" disabled>
+            <div id="passcheck2" class="invalid-feedback">Por favor, preencha a confirmação da senha</div>            
+          </div>
+        </div>
+      </div>
+      
+      <div class="container form__princ">
+      <label>Profissão<span class="text-danger">*</span></label>
+      <select id="profissao" class="form-control" required>
+        <option value=""></option>
+        <option value="ADMINISTRADOR">ADMINISTRADOR</option>
+        <option value="ADVOGADO">ADVOGADO</option>
+        <option value="BABÁ">BABÁ</option>
+        <option value="BANCÁRIO">BANCÁRIO</option>
+        <option value="COMERCIANTE">COMERCIANTE</option>
+        <option value="CONTADOR">CONTADOR</option>
+        <option value="CORRETOR DE IMÓVEIS">CORRETOR DE IMÓVEIS</option>
+        <option value="DESPACHANTE">DESPACHANTE</option>
+        <option value="EMPREGADA DOMÉSTICA">EMPREGADA DOMÉSTICA</option>
+        <option value="ENGENHEIRO">ENGENHEIRO</option>
+        <option value="ESCREVENTE">ESCREVENTE</option>
+        <option value="JORNALISTA">JORNALISTA</option>
+        <option value="MÉDICO">MÉDICO</option>
+        <option value="MOTORISTA PROFISSIONAL">MOTORISTA PROFISSIONAL</option>
+        <option value="OUTROS">OUTROS</option>
+        <option value="PROFESSOR">PROFESSOR</option>
+        <option value="SERVIDOR PÚBLICO">SERVIDOR PÚBLICO</option>
+        <option value="TAXISTA">TAXISTA</option>
+        <option value="VIGILANTE">VIGILANTE</option>
+      </select>
+      <div class="invalid-feedback">Por favor, preencha sua profissão</div>
+    </div>
+    
+  </div>
+  
+  <div class="container title">
+    <h4>Dados de cobrança</h4>
+  </div>
+  
+  <div class="container">
+    
+    <div class="container form__princ">        
+      <div class="row">
+        <div class="col-6">
+          <label for="cpfcnpj2" class="form-label">CPF/CNPJ<span class="text-danger">*</span></label>
+          <input id="cpfcnpj2" type="text" required class="form-control">
+          <div class="invalid-feedback">Por favor, preencha o CPF ou CNPJ da cobrança</div>
+        </div>
+        <div class="col-6">
+          <span id="check--copia">
+            <input id="check-copia" type="checkbox" onclick="copyData()" /> Copiar acima?
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    <div class="container form__princ">
+      <div class="col-12">
+        <label for="nome2" class="form-label">Nome Completo<span class="text-danger">*</span></label>
+        <input id="nome2" type="text" required class="form-control">
+        <div class="invalid-feedback">Por favor, preencha o nome da cobrança</div>
+      </div>
+    </div>
+
+    <div class="container form__princ">
+      <div class="row g-3">        
+        <div class="col-sm-4">
+          <label for="cep" class="form-label">CEP<span class="text-danger">*</span></label>
+          <input id="cep" type="text" required class="form-control" onblur="pesquisacep(this.value);">
+          <div class="invalid-feedback">Por favor, preencha o CEP do endereço da cobrança</div>
+        </div>
+        <div class="col-sm">
+          <label for="uf" class="form-label">UF<span class="text-danger">*</span></label>
+          <select id="uf" class="form-control" required>
+            <option value=""></option>
+            <option value="AC">AC</option>
+            <option value="AL">AL</option>
+            <option value="AM">AM</option>
+            <option value="AP">AP</option>
+            <option value="BA">BA</option>
+            <option value="CE">CE</option>
+            <option value="DF">DF</option>
+            <option value="ES">ES</option>
+            <option value="GO">GO</option>
+            <option value="MA">MA</option>
+            <option value="MG">MG</option>
+            <option value="MT">MT</option>
+            <option value="MS">MS</option>
+            <option value="PA">PA</option>
+            <option value="PB">PB</option>
+            <option value="PE">PE</option>
+            <option value="PI">PI</option>
+            <option value="PR">PR</option>
+            <option value="RJ">RJ</option>
+            <option value="RN">RN</option>
+            <option value="RO">RO</option>
+            <option value="RR">RR</option>
+            <option value="RS">RS</option>
+            <option value="SC">SC</option>
+            <option value="SE">SE</option>
+            <option value="SP">SP</option>
+            <option value="TO">TO</option>
+          </select>
+          <div class="invalid-feedback">Por favor, selecione o estado do endereço da cobrança</div>
+        </div>
+        <div class="col-sm-6">
+          <label for="municipio" class="form-label">Município<span class="text-danger">*</span></label>
+          <input id="municipio" type="text" required class="form-control">
+          <div class="invalid-feedback">Por favor, preencha o município do endereço da cobrança</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container form__princ">
+      <div class="row">        
+        <div class="col-8">
+          <label for="bairro" class="form-label">Bairro<span class="text-danger">*</span></label>
+          <input id="bairro" type="text" required class="form-control">
+          <div class="invalid-feedback">Por favor, preencha o bairro do endereço da cobrança</div>
+        </div>
+        <div class="col-sm">
+            <label for="tipo-logradouro" class="form-label">Tipo de logradouro<span class="text-danger">*</span></label>
+            <select id="tipo-logradouro" class="form-control" required="">
+              <option value=""></option>
+              <option value="ALAMEDA">ALAMEDA</option>
+              <option value="AVENIDA">AVENIDA</option>
+              <option value="BECO">BECO</option>
+              <option value="CAMINHO">CAMINHO</option>
+              <option value="ESTRADA">ESTRADA</option>
+              <option value="ILHA">ILHA</option>
+              <option value="LADEIRA">LADEIRA</option>
+              <option value="LARGO">LARGO</option>
+              <option value="PRAÇA">PRAÇA</option>
+              <option value="PRAIA">PRAIA</option>
+              <option value="RODOVIA">RODOVIA</option>
+              <option value="RUA" selected>RUA</option>
+              <option value="SERVIDAO">SERVIDAO</option>
+              <option value="TRAVESSA">TRAVESSA</option>
+              <option value="VIA">VIA</option>
+              <option value="VILA">VILA</option>
+            </select>
+            <div class="invalid-feedback">Por favor, selecione um tipo de logradouro rro do endereço da cobrança</div>
+          </div>
+        </div>
+    </div>
+    
+    <div class="container form__princ">
+      <div class="row">        
+        <div class="col-8">
+          <label for="logradouro" class="form-label">Logradouro<span class="text-danger">*</span></label>
+          <input id="logradouro" type="text" required class="form-control">
+          <div class="invalid-feedback">Por favor, preencha seu logradouro do endereço da cobrança</div>
+        </div>
+        <div class="col-4">
+          <label for="numero" class="form-label">Número<span class="text-danger">*</span></label>
+          <input id="numero" type="number" required class="form-control">
+          <div class="invalid-feedback">Por favor, preencha seu número do endereço da cobrança</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container form__princ">
+      <div class="row">        
+        <div class="col-8">
+          <label for="tipo-comp-a" class="form-label">Tipo Complemento</label>
+          <select id="tipo-comp-a" class="form-control">
+            <option value=""></option>
+            <option value="AEROPORTO">AEROPORTO</option>
+            <option value="ALA">ALA</option>
+            <option value="ANDAR">ANDAR</option>
+            <option value="ANEXO">ANEXO</option>
+            <option value="APARTAMENTO">APARTAMENTO</option>
+            <option value="AREA">AREA</option>
+            <option value="BLOCO">BLOCO</option>
+            <option value="BOX">BOX</option>
+            <option value="CASA">CASA</option>
+            <option value="COBERTURA">COBERTURA</option>
+            <option value="CONDOMINIO">CONDIMÍNIO</option>
+            <option value="CONJUNTO">CONJUNTO</option>
+            <option value="ENTRADA">ENTRADA</option>
+            <option value="ESTAÇÃO">ESTAÇÃO</option>
+            <option value="FAVELA">FAVELA</option>
+            <option value="FAZENDA">FAZENDA</option>
+            <option value="FORTALEZA">FORTALEZA</option>
+            <option value="FRENTE">FRENTE</option>
+            <option value="FUNDOS">FUNDOS</option>
+            <option value="GALERIA">GALERIA</option>
+            <option value="GALPÃO">GALPÃO</option>
+            <option value="GLEBA">GLEBA</option>
+            <option value="GRUPO">GRUPO</option>
+            <option value="ILHA">ILHA</option>
+            <option value="JUNTO">JUNTO</option>
+            <option value="JUNTO">JUNTO</option>
+            <option value="LOJA">LOJA</option>
+            <option value="LOJAS">LOJAS</option>
+            <option value="LOTE">LOTE</option>
+            <option value="LOTEAMENTO">LOTEAMENTO</option>
+            <option value="MERCADO">MERCADO</option>
+            <option value="NOME DO PROPRIETÁRIO">NOME DO PROPRIETÁRIO</option>
+            <option value="PA">PA</option>
+            <option value="PAL">PAL</option>
+            <option value="PARTE">PARTE</option>
+            <option value="PORTÃO">PORTÃO</option>
+            <option value="PORTARIA">PORTARIA</option>
+            <option value="PROPRIETÁRIO">PROPRIETÁRIO</option>
+            <option value="PRÓXIMO">PRÓXIMO</option>
+            <option value="QUADRA">QUADRA</option>
+            <option value="QUILOMETRO">QUILOMETRO</option>
+            <option value="QUINTA">QUINTA</option>
+            <option value="S/LJ">S/LJ</option>
+            <option value="SALA">SALA</option>
+            <option value="SALAS">SALAS</option>
+            <option value="SHOPPING">SHOPPING</option>
+            <option value="SITIO">SITIO</option>
+            <option value="SOBRADO">SOBRADO</option>
+            <option value="SOBRELOJA">SOBRELOJA</option>
+            <option value="SUBSOLO">SUBSOLO</option>
+            <option value="TERRENO">TERRENO</option>
+            <option value="TERREO">TERREO</option>
+            <option value="TORRE">TORRE</option>
+            <option value="VAGA">VAGA</option>
+            <option value="VILA">VILA</option>
+          </select>
+        </div>
+        <div class="col-4">
+          <label for="numero-a" class="form-label">Número</label>
+          <input id="numero-a" type="text" class="form-control">
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <div class="container form__btn">
+    <button class="btn btn-primary" type="submit">Criar conta</button>
+  </div>
+</form>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="assets/js/jquery.mask.min.js"></script>
+    <script type="text/javascript" src="assets/js/scripts.js"></script>
+    <script type="text/javascript" src="assets/js/cep.js"></script>
+    <script type="text/javascript" src="assets/js/jquery.validate.min.js"></script>
+  </body>
+</html>
