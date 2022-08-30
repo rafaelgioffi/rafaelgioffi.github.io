@@ -15,7 +15,7 @@
         form.classList.add('was-validated')
       }, false)
     })
-  })()
+  })();
   
 // Validar cpf/cnpj
 $("#cpfcnpj").keydown(function() {
