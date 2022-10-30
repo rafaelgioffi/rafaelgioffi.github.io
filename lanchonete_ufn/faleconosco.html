@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="estilos.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      crossorigin="anonymous"
+    />
+    <title>Fale Conosco</title>
+  </head>
+  <body>
+    <nav class="navbar bg-dark">
+      <form class="container-fluid justify-content-start">
+        <a href="index.html">
+        <button class="btn btn-outline-success me-2" type="button">Página inicial</button>
+        </a>
+        <a href="faleconosco.html">
+        <button class="btn btn-sm btn-outline-secondary" type="button">Fale Conosco</button>
+        </a>
+      </form>
+    </nav>
+    <div class="container">&nbsp;</div>
+    <div class="container text-center">
+      <div class="row">
+        <div class="col-md-8 offset-md-2">
+          <h4 class="text-white-50">Informações para contato com a empresa:</h4>
+          <form name="contato" action="realizado.html" method="get">
+            <div class="mb-3 row">
+              <label
+                for="nome"
+                class="col-sm-2 col-form-label text-white-50 fs-4"
+                >Nome</label
+              >
+              <div class="col-sm-8">
+                <input type="text" class="form-control" id="nome" />
+              </div>
+            </div>
+            <div class="mb-3 row">
+              <label
+                for="celular"
+                class="col-sm-2 col-form-label text-white-50 fs-4"
+                >Celular</label
+              >
+              <div class="col-sm-8">
+                <input type="text" class="form-control" id="celular" />
+              </div>
+            </div>
+
+            <label for="celular" class="col-sm-2 col-form-label text-white-50 fs-4">Sexo</label>
+            <div class="form-check form-check-inline">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="sexo"
+                id="sexo"
+                value="masculino"
+              />
+              <label class="form-check-label text-white-50" for="inlineRadio1"
+                >Masculino</label
+              >
+            </div>
+
+            <div class="form-check form-check-inline">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="sexo"
+                id="sexo"
+                value="feminino"
+              />
+              <label class="form-check-label text-white-50" for="inlineRadio1"
+                >Feminino</label
+              >
+            </div>
+            <div class="form-check form-check-inline">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="sexo"
+                id="sexo"
+                value="neutro"
+              />
+              <label class="form-check-label text-white-50" for="inlineRadio1"
+                >Neutro</label
+              >
+            </div>
+            <div class="form-check form-check-inline">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="sexo"
+                id="sexo"
+                value="indeterminado"
+              />
+              <label class="form-check-label text-white-50" for="inlineRadio1"
+                >Indeterminado</label
+              >
+            </div>
+            <div class="form-floating">
+              <textarea
+                class="form-control"
+                placeholder="Deixe sua mensagem aqui"
+                id="mensagem"
+                style="height: 100px"
+              ></textarea>
+              <label for="mensagem">Mensagem</label>
+            </div>
+            <div class="container">&nbsp;</div>
+            <div class="row justify-content-center">
+              <div class="col-4">
+                <button type="submit" class="btn btn-success">Enviar Mensagem</button>                
+              </div>
+              <div class="col-4">
+                <button type="reset" class="btn btn-danger">Limpar</button>                
+              </div>
+              <div class="col-4">
+                <a href="index.html">
+                <button type="button" class="btn btn-danger">Não Enviar</button>                
+                </a>
+              </div>
+            </div>
+              
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div class="fixed-bottom d-flex justify-content-around bg-dark">
+      <footer class="text-white-50">
+      Lanchonete UFN&reg;<br>
+       &copy;2022. Todos os direitos reservados.
+    </footer>
+  </div>
+  </body>
+</html>
